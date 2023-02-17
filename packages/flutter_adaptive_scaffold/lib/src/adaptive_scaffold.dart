@@ -253,16 +253,10 @@ class AdaptiveScaffold extends StatefulWidget {
     double width = 72,
     int? selectedIndex,
     bool extended = false,
-    Color backgroundColor = Colors.transparent,
     EdgeInsetsGeometry padding = const EdgeInsets.all(8.0),
     Widget? leading,
     Widget? trailing,
     Function(int)? onDestinationSelected,
-    IconThemeData selectedIconTheme = const IconThemeData(color: Colors.black),
-    IconThemeData unselectedIconTheme =
-        const IconThemeData(color: Colors.black),
-    TextStyle selectedLabelTextStyle = const TextStyle(color: Colors.black),
-    NavigationRailLabelType labelType = NavigationRailLabelType.none,
   }) {
     if (extended && width == 72) {
       width = 192;
@@ -280,16 +274,11 @@ class AdaptiveScaffold extends StatefulWidget {
                 constraints: BoxConstraints(minHeight: constraints.maxHeight),
                 child: IntrinsicHeight(
                   child: NavigationRail(
-                    labelType: labelType,
                     leading: leading,
                     trailing: trailing,
                     onDestinationSelected: onDestinationSelected,
-                    backgroundColor: backgroundColor,
                     extended: extended,
                     selectedIndex: selectedIndex,
-                    selectedIconTheme: selectedIconTheme,
-                    unselectedIconTheme: unselectedIconTheme,
-                    selectedLabelTextStyle: selectedLabelTextStyle,
                     destinations: destinations,
                   ),
                 ),

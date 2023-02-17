@@ -232,7 +232,6 @@ class _MyHomePageState extends State<MyHomePage>
                     scale: _articleIconSlideController,
                     child: const _MediumComposeIcon(),
                   ),
-                  backgroundColor: const Color.fromARGB(0, 255, 255, 255),
                   destinations: <NavigationRailDestination>[
                     slideInNavigationItem(
                       begin: -1,
